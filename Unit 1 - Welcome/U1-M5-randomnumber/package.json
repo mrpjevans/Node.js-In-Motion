@@ -1,0 +1,15 @@
+{
+  "name": "randomnumber",
+  "version": "1.0.0",
+  "description": "Generates a random number between 1 and 10",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PJ Evans",
+  "license": "MIT",
+  "dependencies": {
+    "seedrandom": "^2.4.3"
+  },
+  "devDependencies": {}
+}
