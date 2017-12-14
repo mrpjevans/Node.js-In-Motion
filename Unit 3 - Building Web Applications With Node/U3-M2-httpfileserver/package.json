@@ -1,0 +1,14 @@
+{
+  "name": "cat-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "httpfileserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PJ Evans",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^4.0.2"
+  }
+}

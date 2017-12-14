@@ -1,0 +1,14 @@
+doctype html
+html
+    body
+        h1 Hello
+        p This is some text
+        p= theTime
+        p The time is #{theTime}
+        p Here's a list
+        ul
+            each val in aList
+                if val == 'Three'
+                    li The Magic Number
+                else
+                    li= val

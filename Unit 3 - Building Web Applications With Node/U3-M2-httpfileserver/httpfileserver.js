@@ -15,7 +15,7 @@ const contentTypes = {
 
 // Create HTTP Server Object
 http.createServer(async (req, res) => {
-
+    
     // Work out the path to the requested file
     let filePath = req.url;
     if (filePath == '/') {
@@ -42,14 +42,7 @@ http.createServer(async (req, res) => {
         res.end('<html><body><h1>Not Found :(</h1></body></html>');
     }
 
+    
 }).listen(8080, (err) => { // Start listening
     console.log('Server running at http://127.0.0.1:8125/');
 });
-
-
-
-
-
-
-
-
