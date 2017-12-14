@@ -1,0 +1,14 @@
+{
+  "name": "trymongodb",
+  "version": "1.0.0",
+  "description": "Have a play with NoSQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PJ Evans",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^2.2.33"
+  }
+}
