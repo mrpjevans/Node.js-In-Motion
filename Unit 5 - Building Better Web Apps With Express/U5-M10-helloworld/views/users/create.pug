@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+    h1 Create a New User
+    if alert
+        if alert.type == 'success'
+            div.alert.alert-success User created successfully
+        else if alert.type == 'validation'
+            div.alert.alert-warning Please check the form
+
+    form(action='create',method='POST')
+
+        include form.pug
+
+        button.btn.btn-primary Create
+        | 
+        a.btn.btn-default(href="/users/") Cancel

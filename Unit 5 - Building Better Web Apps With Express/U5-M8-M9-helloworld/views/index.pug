@@ -1,0 +1,16 @@
+
+extends layout
+
+block content
+
+    // A nice, friendly welcome
+    h1.heroHelloWorld= greeting.translation
+    p.text-center That's #{greeting.language} for 'Hello, World' in the #{font.name} font
+
+    hr        
+
+    // Chuck Norris
+    .row
+        .col-md-12
+            .well.chuck= chuck
+            

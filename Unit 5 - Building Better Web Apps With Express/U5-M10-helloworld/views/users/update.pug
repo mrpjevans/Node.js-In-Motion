@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+    h1 Update User
+    if alert
+        if alert.type == 'success'
+            div.alert.alert-success User modified successfully
+        else if alert.type == 'validation'
+            div.alert.alert-warning Please check the form
+
+    form(action='.',method="POST")
+        input(type='hidden',name='id',value=fields.id)
+        
+        include form.pug
+        
+        button.btn.btn-primary Update
+        | 
+        a.btn.btn-default(href="/users/") Cancel
+        button#delete.btn.btn-danger.pull-right Delete
+
+    script.
+        $('#delete').on('click',function(){
+            if(confirm('Are you sure?')) {
+                $('form').attr('action','delete').submit();
+            }
+        })

@@ -1,0 +1,49 @@
+.table-hover {
+    cursor: pointer;
+}
+
+.heroHelloWorld {
+    text-align: center;
+    font-size: 100px;
+}
+
+.fixed-ratio-resize {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.mypanel  {
+    height:150px;
+}
+
+.panel-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mypanel-clock {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.mypanel-date {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.mypanel-weather {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;   
+}
+
+.status-button {
+    padding:0;
+}
+
+.chuck {
+    text-align: center;
+}

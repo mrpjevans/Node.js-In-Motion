@@ -1,0 +1,65 @@
+
+extends layout
+
+block content
+
+    // A nice, friendly welcome
+    h1.heroHelloWorld= greeting.translation
+    p.text-center That's #{greeting.language} for 'Hello, World!' in the #{font.name} font
+
+    hr
+
+    // User Status Panels
+    .row
+        each user in users
+          .col-md-2
+            .panel.panel-default
+              .panel-body
+                p: img.fixed-ratio-resize(src='/images/' + user.username + '.png')
+              .panel-footer.text-center
+                p= user.name
+                if user.id != authuser.id
+                  div(data-userid=user.id): strong= user.status
+                else
+                  .dropdown
+                    button.btn.btn-link.status-button(type='button',data-toggle='dropdown')
+                      span#myStatus(data-userid=user.id)= user.status
+                      | 
+                      span.caret
+                    ul.dropdown-menu
+                      li.set-status: a In
+                      li.set-status: a Out
+                      li.set-status: a Busy
+
+    // Panels
+    .row
+    .col-md-4
+      .panel.panel-default
+        .panel-body.mypanel
+          .mypanel-clock
+        .panel-footer.text-center
+          | Server Time
+
+    .col-md-4
+      .panel.panel-default
+        .panel-body.mypanel
+          .mypanel-date
+            span.date-month
+            span 
+            span.date-date
+        .panel-footer.text-center
+          | Server Date
+
+    .col-md-4
+      .panel.panel-default
+        .panel-body.mypanel
+          .mypanel-weather
+        .panel-footer.text-center
+          | Weather
+
+    // Chuck Norris
+    .row
+        .col-md-12
+            .well.chuck= chuck
+    
+    script(src="javascripts/script.js")

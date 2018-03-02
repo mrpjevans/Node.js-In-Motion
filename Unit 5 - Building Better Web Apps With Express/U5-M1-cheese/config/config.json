@@ -1,0 +1,17 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "db/cheese.sqlite",
+    "operatorsAliases": false
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "db/cheese.sqlite",
+    "operatorsAliases": false
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "db/cheese.sqlite",
+    "operatorsAliases": false
+  }
+}

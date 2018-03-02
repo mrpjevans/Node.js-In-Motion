@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+    h1 Users
+    if alert
+        case alert.type
+            when 'deleted'
+                div.alert.alert-success User deleted successfully
+            when 'self'
+                div.alert.alert-warning You cannot delete yourself
+    table.table.table-hover
+        thead
+            th Username
+            th Name
+            th Email
+            th Role
+            th Status
+        tbody
+            each user in users
+                tr(onclick="window.location = '/users/" + user.username + "/'")
+                    td= user.username
+                    td= user.name
+                    td= user.email
+                    td= user.role
+                    td= user.status
+    a.btn.btn-primary(href='/users/create') Add New User

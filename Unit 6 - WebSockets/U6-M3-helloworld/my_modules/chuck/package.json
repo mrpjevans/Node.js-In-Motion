@@ -1,0 +1,11 @@
+{
+  "name": "chuck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chuck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PJ Evans",
+  "license": "MIT"
+}

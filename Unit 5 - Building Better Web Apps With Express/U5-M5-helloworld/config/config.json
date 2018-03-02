@@ -1,0 +1,20 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "db/hello_world.sqlite",
+    "operatorsAliases": false,
+    "logging": false
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "db/hello_world.sqlite",
+    "operatorsAliases": false,
+    "logging": false
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "db/hello_world.sqlite",
+    "operatorsAliases": false,
+    "logging": false
+  }
+}

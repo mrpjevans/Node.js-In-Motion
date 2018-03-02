@@ -1,0 +1,16 @@
+{
+  "name": "chuck",
+  "version": "1.0.0",
+  "description": "Chuck Norris facts",
+  "main": "chuck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chuck",
+    "norris",
+    "awesome"
+  ],
+  "author": "PJ Evans",
+  "license": "MIT"
+}

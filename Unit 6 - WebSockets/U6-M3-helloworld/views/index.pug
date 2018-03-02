@@ -1,0 +1,43 @@
+
+extends layout
+
+block content
+
+    // A nice, friendly welcome
+    h1.heroHelloWorld= greeting.translation
+    p.text-center That's #{greeting.language} for 'Hello, World!' in the #{font.name} font
+
+    hr        
+
+    // Panels
+    .row
+    .col-md-4
+      .panel.panel-default
+        .panel-body.mypanel
+          .mypanel-clock
+        .panel-footer.text-center
+          | Server Time
+
+    .col-md-4
+      .panel.panel-default
+        .panel-body.mypanel
+          .mypanel-date
+            span.date-month
+            span 
+            span.date-date
+        .panel-footer.text-center
+          | Server Date
+
+    .col-md-4
+      .panel.panel-default
+        .panel-body.mypanel
+          .mypanel-weather
+        .panel-footer.text-center
+          | Weather
+
+    // Chuck Norris
+    .row
+        .col-md-12
+            .well.chuck= chuck
+    
+    script(src="javascripts/script.js")

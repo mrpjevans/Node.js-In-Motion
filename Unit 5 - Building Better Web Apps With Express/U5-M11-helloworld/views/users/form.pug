@@ -1,0 +1,50 @@
+input(type="hidden", name="_csrf", value=csrf)
+
+div.form-group(class=problems.name ? "has-error" : "")
+    label.control-label(for="name") Name
+    input#name.form-control(type="text",name="name",value=fields.name)
+    if problems.name
+        span.help-block Please complete this field
+
+div.form-group(class=problems.email ? "has-error" : "")
+    label.control-label(for="email") Email
+    input#email.form-control(type="email",name="email",value=fields.email)
+    if problems.email
+        span.help-block Please complete this field
+
+div.form-group(class=problems.username ? "has-error" : "")
+    label.control-label(for="username") Username
+    input#username.form-control(type="text",name="username",value=fields.username)
+    if problems.username
+        if problems.username == 'username_in_use'
+            span.help-block This username is already in use
+        else
+            span.help-block Please complete this field
+
+div.form-group(class=problems.password ? "has-error" : "")
+    label.control-label(for="password") Password
+    input#password.form-control(type="password",name="password")
+    if problems.password
+        span.help-block Please complete this field
+
+div.form-group(class=problems.confirm_password ? "has-error" : "")
+    label.control-label(for="confirm_password") Confirm Password
+    input#confirm_password.form-control(type="password",name="confirm_password")
+    if problems.confirm_password
+        if problems.username == 'password_mismatch'
+            span.help-block The password and the confirmation did not match
+        else
+            span.help-block Please complete this field
+
+div.form-group(class=problems.role ? "has-error" : "")
+    label.control-label(for="role") Role
+    select.form-control(name="role")
+        option(selected=fields.role == 'User') User
+        option(selected=fields.role == 'Admin') Admin
+
+div.form-group(class=problems.status ? "has-error" : "")
+    label.control-label(for="status") Status
+    select.form-control(name="status")
+        option(selected=fields.status == 'In') In
+        option(selected=fields.status == 'Out') Out
+        option(selected=fields.status == 'Busy') Busy

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1 Quick Chat
+    form(onsubmit='return(sendUpdate())')
+        p
+            | Your Username
+            br
+            input(type='text',name='handle',required)
+        p: textarea(name='chatwindow',disabled)
+        p
+            | Update Status
+            br
+            input(type='text',name='update',required)
+            button Send

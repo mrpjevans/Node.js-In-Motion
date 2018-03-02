@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1 Login
+    if authFailure
+        div.alert.alert-danger Username or password incorrect
+
+    form(action='login',method='POST')
+
+        input(type="hidden", name="_csrf", value=csrf)
+
+        div.form-group
+            label.control-label(for="username") Username
+            input#username.form-control(type="text",name="username",value=username)
+
+        div.form-group
+            label.control-label(for="password") Password
+            input#password.form-control(type="password",name="password")
+
+        button.btn.btn-primary Log In

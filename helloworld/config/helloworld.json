@@ -1,0 +1,11 @@
+{
+    "yandex": {
+        "apikey": "YANDEX API KEY GOES HERE",
+        "uri": "https://translate.yandex.net/api/v1.5/tr.json/translate"
+    },
+    "wunderground": {
+        "apikey": "WUNDERGROUND API KEY GOES HERE",
+        "uri": "http://api.wunderground.com/api/",
+        "city": "UK/London"
+    }
+}
